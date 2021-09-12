@@ -1,0 +1,35 @@
+@import 'var';
+@import 'basic';
+@import 'mixins';
+
+header{
+    background-image: url("../images/bg.jpg");
+    @include bgBasic;
+    width: 98%;
+    height: 70vh;
+    margin: auto;
+    .topLogo{
+        @include flex($x: space-around);
+        ul{
+            display: flex;
+        }
+    }
+    a{
+        color: $whit;
+    }
+    nav{
+       ul{
+        @include flex($x:center);
+        li{
+            display: inline-block;
+            margin-left: 40px;
+            a{
+                color:  rgba(255,255,255,0.5);
+                line-height: 70px;
+            }
+        }
+        background-color: $primery;
+        padding: 0px 40px 0px 40px;
+       }
+    }
+}

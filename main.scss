@@ -2,6 +2,8 @@
 @import 'basic';
 @import 'mixins';
 
+
+//HEADER
 header{
     background-image: url("../images/bg.jpg");
     @include bgBasic;
@@ -19,17 +21,23 @@ header{
     }
     nav{
        ul{
-        @include flex($x:center);
+        display: flex;
+        align-items: flex-end;
         li{
             display: inline-block;
             margin-left: 40px;
             a{
                 color:  rgba(255,255,255,0.5);
                 line-height: 70px;
+                transition: $transition;
+                &:hover{
+                    color: rgba(255,255,255,0.8);
+                }
             }
         }
         background-color: $primery;
-        padding: 0px 40px 0px 40px;
+        padding: 0 40px  0 40px;
        }
     }
 }
+//POSTOS
